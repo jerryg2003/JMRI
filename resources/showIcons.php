@@ -31,6 +31,17 @@ function showSubdirs() {
         echo file_get_contents( "README" );
         echo "</pre>\n";
     }
+    elseif (file_exists("README.md")) {
+        echo "<pre>\n";
+        echo file_get_contents( "README.md" );
+        echo "</pre>\n";
+    }
+    elseif (file_exists("README.txt")) {
+        echo "<pre>\n";
+        echo file_get_contents( "README.txt" );
+        echo "</pre>\n";
+    }
+    endif;
     
     // show subdirectories
     $list = array();
