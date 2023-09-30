@@ -56,7 +56,7 @@ function showFilesAndIcons() {
 
     $d = dir(".");
     while (false !== ($entry = $d->read())) {
-       if (endswith($entry, ".py")) {
+       if     (endswith($entry, ".py") || endswith($entry, ".py3") )   {
          $listPy[] = $entry;
        }
        elseif (endswith($entry, ".gif")
@@ -64,7 +64,7 @@ function showFilesAndIcons() {
             || endswith($entry, ".png")
             || endswith($entry, ".EPS")
             || endswith($entry, ".PSD")
-            )   {
+              )   {
          $listIcon[] = $entry;
        }
        elseif (! (startswith($entry, ".") || is_dir($entry) || endswith($entry, ".php")) ) {
